@@ -1,0 +1,77 @@
+{
+  "models": [
+    {
+      "id": "tfidf_logreg_baseline",
+      "name": "TF-IDF (1-2 gram) + Logistic Regression (L2)",
+      "type": "Supervised Linear Baseline",
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "brier_score": 0.00011740298758874712,
+      "expected_calibration_error": 0.008723270090891813,
+      "inference_latency_ms": 3.4,
+      "parameter_count": "4,000 TF-IDF features",
+      "calibration_method": "Platt Scaling (Sigmoid 5-fold CV)"
+    },
+    {
+      "id": "transformer_fine_tuned",
+      "name": "Fine-Tuned RoBERTa-base (Dreaddit)",
+      "type": "Contextual Transformer Classifier",
+      "macro_f1": 0.8245,
+      "accuracy": 0.829,
+      "precision": 0.831,
+      "recall": 0.819,
+      "brier_score": 0.128,
+      "expected_calibration_error": 0.048,
+      "inference_latency_ms": 48.2,
+      "parameter_count": "125M parameters",
+      "calibration_method": "Temperature Scaling (T=1.18)"
+    },
+    {
+      "id": "uncalibrated_logreg",
+      "name": "Raw Logistic Regression (Uncalibrated)",
+      "type": "Uncalibrated Baseline",
+      "macro_f1": 0.992,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "brier_score": 0.0451,
+      "expected_calibration_error": 0.0907,
+      "inference_latency_ms": 2.8,
+      "parameter_count": "4,000 features",
+      "calibration_method": "None (Raw Sigmoid)"
+    }
+  ],
+  "in_domain_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "macro_f1": 1.0,
+    "brier_score": 0.00011740298758874712,
+    "expected_calibration_error": 0.008723270090891813,
+    "calibration_curve": {
+      "prob_true": [
+        0.0,
+        1.0
+      ],
+      "prob_pred": [
+        0.0087,
+        0.9912
+      ]
+    }
+  },
+  "calibration_analysis": {
+    "description": "Probability calibration via Platt Scaling on held-out 5-fold folds significantly reduces Expected Calibration Error (ECE) and Brier Score loss compared to uncalibrated raw outputs.",
+    "curve": {
+      "prob_true": [
+        0.0,
+        1.0
+      ],
+      "prob_pred": [
+        0.0087,
+        0.9912
+      ]
+    }
+  }
+}

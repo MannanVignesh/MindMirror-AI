@@ -1,0 +1,229 @@
+{
+  "experiment_name": "Leave-One-Community-Out (LOCO) Cross-Domain Evaluation",
+  "total_communities": 10,
+  "total_evaluated_samples": 1200,
+  "overall_macro_f1": 0.9415,
+  "overall_accuracy": 0.9417,
+  "overall_precision": 0.8955,
+  "overall_recall": 1.0,
+  "overall_confusion_matrix": {
+    "tn": 530,
+    "fp": 70,
+    "fn": 0,
+    "tp": 600
+  },
+  "per_community": {
+    "almosthomeless": {
+      "community": "almosthomeless",
+      "domain": "financial",
+      "sample_count": 120,
+      "accuracy": 0.9167,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "macro_f1": 0.9161,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 10,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "anxiety": {
+      "community": "anxiety",
+      "domain": "mental_health",
+      "sample_count": 120,
+      "accuracy": 0.9167,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "macro_f1": 0.9161,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 10,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "assistance": {
+      "community": "assistance",
+      "domain": "social_distress",
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "tn": 60,
+        "fp": 0,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "food_pantry": {
+      "community": "food_pantry",
+      "domain": "financial",
+      "sample_count": 120,
+      "accuracy": 0.9167,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "macro_f1": 0.9161,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 10,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "homeless": {
+      "community": "homeless",
+      "domain": "social_distress",
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "tn": 60,
+        "fp": 0,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "povertyfinance": {
+      "community": "povertyfinance",
+      "domain": "financial",
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "tn": 60,
+        "fp": 0,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "ptsd": {
+      "community": "ptsd",
+      "domain": "mental_health",
+      "sample_count": 120,
+      "accuracy": 0.8333,
+      "precision": 0.75,
+      "recall": 1.0,
+      "macro_f1": 0.8286,
+      "confusion_matrix": {
+        "tn": 40,
+        "fp": 20,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "relationships": {
+      "community": "relationships",
+      "domain": "interpersonal",
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "tn": 60,
+        "fp": 0,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "stress": {
+      "community": "stress",
+      "domain": "general_stress",
+      "sample_count": 120,
+      "accuracy": 0.9167,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "macro_f1": 0.9161,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 10,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "survivorsofabuse": {
+      "community": "survivorsofabuse",
+      "domain": "interpersonal",
+      "sample_count": 120,
+      "accuracy": 0.9167,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "macro_f1": 0.9161,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 10,
+        "fn": 0,
+        "tp": 60
+      }
+    }
+  },
+  "per_domain": {
+    "interpersonal": {
+      "domain": "interpersonal",
+      "subreddits": [
+        "relationships",
+        "survivorsofabuse"
+      ],
+      "total_samples": 240,
+      "mean_accuracy": 0.9584,
+      "mean_precision": 0.9285,
+      "mean_recall": 1.0,
+      "mean_macro_f1": 0.9581
+    },
+    "mental_health": {
+      "domain": "mental_health",
+      "subreddits": [
+        "anxiety",
+        "ptsd"
+      ],
+      "total_samples": 240,
+      "mean_accuracy": 0.875,
+      "mean_precision": 0.8035,
+      "mean_recall": 1.0,
+      "mean_macro_f1": 0.8723
+    },
+    "financial": {
+      "domain": "financial",
+      "subreddits": [
+        "povertyfinance",
+        "almosthomeless",
+        "food_pantry"
+      ],
+      "total_samples": 360,
+      "mean_accuracy": 0.9445,
+      "mean_precision": 0.9047,
+      "mean_recall": 1.0,
+      "mean_macro_f1": 0.9441
+    },
+    "social_distress": {
+      "domain": "social_distress",
+      "subreddits": [
+        "assistance",
+        "homeless"
+      ],
+      "total_samples": 240,
+      "mean_accuracy": 1.0,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "mean_macro_f1": 1.0
+    },
+    "general_stress": {
+      "domain": "general_stress",
+      "subreddits": [
+        "stress"
+      ],
+      "total_samples": 120,
+      "mean_accuracy": 0.9167,
+      "mean_precision": 0.8571,
+      "mean_recall": 1.0,
+      "mean_macro_f1": 0.9161
+    }
+  }
+}

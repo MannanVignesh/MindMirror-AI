@@ -1,0 +1,98 @@
+# ========================
+# MindMirror AI — .gitignore
+# ========================
+
+# --- Node / Next.js (frontend) ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+frontend/coverage/
+*.tsbuildinfo
+frontend/next-env.d.ts
+
+# --- Python (backend) ---
+backend/__pycache__/
+backend/**/__pycache__/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Python virtual environments (wherever they live)
+backend/venv/
+backend/.venv/
+.venvs/
+venv/
+.venv/
+
+# Python build & distribution
+*.egg-info/
+dist/
+build/
+*.egg
+MANIFEST
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# --- Secrets & environment files ---
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Large model / data files ---
+# ML model checkpoints and large binaries — keep .joblib in artifacts
+# (model_baseline.joblib is ~130 KB, safe to commit)
+# Add patterns below for any large files you do NOT want committed:
+# *.h5
+# *.pt
+# *.pkl
+
+# Dreaddit raw CSV dataset — do not commit without rights verification
+backend/data/*.csv
+backend/data/dreaddit/
+
+# --- OS artifacts ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- Editor / IDE ---
+.idea/
+.vscode/settings.json
+*.suo
+*.user
+*.userosscache
+*.sln.docobj
+
+# --- Vercel ---
+.vercel
+
+# --- Misc ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+*.pem
+
+# Temporary / scratch
+*.tmp
+*.temp
